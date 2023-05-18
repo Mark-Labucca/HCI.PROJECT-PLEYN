@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PLEYN </title>
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="tab icon" href="../img/P%20TAB%20ICON.png">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>                    
+    
+</head>
+    
+<body>
+    
+    <header>
+        <a href="#" class="logo">PLEYИ</a>
+        <div class="group">
+            <ul class="navigation">
+                <li> <a href="home.html">Home</a></li>
+                
+                <li> <a href="shop.html">Shop</a></li>
+                
+                <li> <a href="size.html">Size Chart</a></li>
+                
+                <li> <a href="faq.html">FAQ</a></li>
+                
+                <li  class="active"> <a href="about.html">About Us</a></li>
+            </ul>
+            <div class="scart">
+                <span class="icon">
+                    <a href="cart.html"><ion-icon name="cart"></ion-icon></a>
+                </span>
+            </div>
+            
+            <div class="profile">
+                <span class="icon">
+                    <a href="profile.html"><ion-icon name="person-outline"></ion-icon></a>
+                </span>
+            </div>
+            
+            <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
+            
+        </div>
+    </header>
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <script> 
+        let navigation = document.querySelector('.navigation');
+        let menuToggle = document.querySelector('.menuToggle');
+        let header = document.querySelector('header');
+        
+        menuToggle.onclick = function(){
+            header.classList.toggle('open');
+        }
+    
+    </script>
+     
+        <section>
+            <h1>ABOUT US</h1>
+            <img src="../img/PLEYN-MEANING.png" alt="Pleyn Meaning" class="aboutpleyn">
+          
+            <h2> LOCATED IN</h2>
+            <p class="loc">As an online shop, we are located in Old Cabalan, Olongapo City, Zambales, Philippines. However, we do not have a physical store at this time. All orders are processed and shipped from our warehouse.</p>
+            <p class="map"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15425.93562708504!2d120.30296971280205!3d14.85419561129797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33967069efc84467%3A0x619be12a26d17b41!2sOld%20Cabalan%2C%20Subic%20Bay%20Freeport%20Zone%2C%20Olongapo%2C%20Zambales!5e0!3m2!1sen!2sph!4v1681361540122!5m2!1sen!2sph" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </p>
+            <br>
+            <h2> CONTACT US AT</h2>
+            <p>0938-924-1559 / 222-1642</p>
+            <br>
+            <h2> SOCIAL MEDIA ACCOUNTS</h2>
+            <p>Facebook: PLEYN Clothing </p>
+            <p>Instagram: @pleynclothing </p>
+            <p>GMail Account: pleynclothing@gmail.com</p>
+        </section>
+       
+        <footer>
+          <div class="footer">
+            <div class="col-1">
+                <a href="#" class="logo">PLEYИ</a>
+            </div>
+              
+            <div class="col-2">
+                <h3> LET'S KEEP IN TOUCH...</h3>
+              
+                <form>
+                    <ion-icon name="mail"></ion-icon>
+                    <input type="email" placeholder="someone@email.com" required>
+                    <button type="submit"><ion-icon name="send-outline"></ion-icon></button>
+                </form>
+                <br>
+                <p> DESIGNED BY MARK LABUCCA</p>
+            </div>
+              
+            <div class="col-3">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/pleyn.ph"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://instagram.com/pleynclothing?igshid=YmMyMTA2M2Y="><ion-icon name="logo-instagram"></ion-icon></a>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </div>
+            </div>
+              
+    
+          </div>
+        </footer>
+    
+</body> 
+
+</html>

@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #FFFFFF;
+    min-height: 100vh;
+    overflow-x: hidden;
+    
+}
+
+/* These lines of code is for the navigation bar */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:  0 15px 15px rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+.logo{
+    color: #000000;
+    text-decoration: none;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+.group{
+    display: flex;
+    align-items: center;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    left: -60px;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    text-decoration:none;
+    font-size: 1em;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+}
+
+header ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+header ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header .scart{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    left: -30px;
+    top: 2.5px;
+}
+
+header .profile{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    left: -5px;
+    top: 2.5px;
+}
+
+ion-icon[name="cart"],
+ion-icon[name="person-outline"]{
+    color: #000000;
+}
+
+.menuToggle{
+    position:  relative;
+    display: none;
+}
+
+header.open .navigation{
+    top: 80px;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    width: 100%;
+    height: calc(100vh - 80px);
+    padding: 40px;
+    border-top: 1px solid rgba(0,0,0.05);
+}
+
+header.open .navigation li a{ 
+    font-size: 1.25em;
+}
+
+/* Navigation bar ends here*/
+
+
+section {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin-top: 130px;
+    padding-top: 100px;
+  
+} 
+
+section h1{
+    text-align: center;
+    font-weight: 800;
+    font-size: 65px;
+    
+}
+
+p{
+    margin-top: 0;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.register-form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+    margin-top: 50px;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 10px;
+    margin-right: 420px;
+}
+
+.register-form input[type="email"],
+.register-form input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.register-form input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 200px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-form input[type="submit"]:hover {
+  background-color: #333;
+}
+
+.register-form a {
+  color: red;
+  text-decoration: none;
+}
+
+.register-form a:hover {
+  text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 320px) {
+    section h1 {
+        font-size: 35px;
+        margin-top: -90px;
+  }
+  
+  .register-form {
+        max-width: 80%;
+        margin-bottom: 50px;
+  }
+  
+  .register-form label {
+        margin-right: 0;
+        text-align: left;
+  }
+    
+    .register-form input[type="submit"] {
+  padding: 10px 60px;
+  
+  }
+    
+    .menuToggle {
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+    
+    header .navigation{
+        display: none;
+        position: absolute;
+        visibility: hidden;
+        left: 100%;
+    }
+    
+     header .scart{
+        left: -40px; 
+    }
+
+    header .profile{
+        left: -27px;
+    }
+    
+     .logo{
+        font-size: 2.0em;  
+    }
+    
+}
+
+@media screen and (min-width: 321px) and (max-width: 445px) {
+    section h1 {
+    font-size: 40px;
+    margin-top: -90px;
+  }
+  
+  .register-form {
+    max-width: 80%;
+  }
+  
+  .register-form label {
+    margin-right: 0;
+    text-align: left;
+  }
+    
+  .register-form input[type="submit"] {
+  padding: 10px 80px;
+  
+  }
+    
+    .menuToggle {
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+    
+    header .navigation{
+        display: none;
+        position: absolute;
+        visibility: hidden;
+        left: 100%;
+    }
+    
+    
+    header .scart{
+        left: -50px; 
+    }
+
+    header .profile{
+        left: -30px;
+    }  
+}
+
+@media screen and (min-width: 446px) and (max-width: 680px) {
+    section h1 {
+    font-size: 40px;
+    margin-top: -90px;
+  }
+  
+  .register-form {
+    max-width: 80%;
+  }
+  
+  .register-form label {
+    margin-right: 0;
+    text-align: left;
+  }
+    
+    .menuToggle {
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+    
+    header .navigation{
+        display: none;
+        position: absolute;
+        visibility: hidden;
+        left: 100%;
+    }
+    
+    header .scart{
+        left: -50px; 
+    }
+
+    header .profile{
+        left: -30px;
+    }
+}
+
+@media screen and (min-width: 681px) and (max-width: 1300px) {
+    section h1 {
+    font-size: 60px;
+  }
+  
+  .register-form {
+    max-width: 70%;
+      
+  }
+  
+  .register-form label {
+    margin-right: 0;
+    text-align: left;
+  }
+    
+    .menuToggle {
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+    
+    header .navigation{
+        display: none;
+        position: absolute;
+        visibility: hidden;
+        left: 100%;
+    }   
+    
+    header .scart{
+        left: -50px; 
+    }
+
+    header .profile{
+        left: -30px;
+    }
+}
+
+@media screen and (min-width: 1366px) and (max-width: 2000px) {
+  section {
+    margin-top: 80px;
+   } 
+    body {
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #FFFFFF;
+    min-height: 100vh;
+    overflow-x: hidden;
+    
+}
+
+/* These lines of code is for the navigation bar */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:  0 15px 15px rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+.logo{
+    color: #000000;
+    text-decoration: none;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+.group{
+    display: flex;
+    align-items: center;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    left: -60px;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    text-decoration:none;
+    font-size: 1em;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+}
+
+header ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+header ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header ul li.active a::before,
+header ul li.active a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+header .scart{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    left: -30px;
+    top: 2.5px;
+}
+
+header .profile{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    left: -5px;
+    top: 2.5px;
+}
+
+ion-icon[name="cart"],
+ion-icon[name="person-outline"]{
+    color: #000000;
+}
+
+
+.menuToggle{
+    position:  relative;
+    display: none;
+}
+
+header.open .navigation{
+    top: 80px;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    width: 100%;
+    height: calc(100vh - 80px);
+    padding: 40px;
+    border-top: 1px solid rgba(0,0,0.05);
+}
+
+header.open .navigation li a{ 
+    font-size: 1.25em;
+}
+
+/* Navigation bar ends here*/
+
+
+section {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin-top: 130px;
+    padding-top: 50px;
+  
+}
+
+section h1{
+    text-align: center;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+section h3 {
+    margin-left: 190px;
+    
+}
+
+.faqs {
+    margin-left: 190px;
+    font-size: 1.0em;
+    margin-right: 80px;     
+}
+
+section h3 + ul li{
+    margin-left: 240px;
+    font-size: 1.0em;
+}
+
+/* These lines of code is for the footer */
+
+.footer{
+    margin-top: 30px;
+    width: 100%;
+    padding: 50px 15%;
+    background: #F0F1F2;
+    color: #000000;
+    display: flex;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer div{
+    text-align: center;
+}
+
+.col-2{
+    flex-grow: 2;
+}
+
+.col-2 p {
+    color: #808080;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+ion-icon[name="mail"] {
+    font-size: 1.5em;
+}
+
+ion-icon[name="send-outline"]{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    
+}
+
+.col-1{
+    margin-top: 160px;
+}
+
+.footer div h3{
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.01em;
+    font-size: 1.8em;
+}
+
+form input{
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background: #F0F1F2;
+}
+
+.social-icons{
+    margin-top: 160px;
+}
+
+ion-icon[name="logo-facebook"],
+ion-icon[name="logo-instagram"],
+ion-icon[name="logo-twitter"] {
+    font-size: 2.0em;
+    margin: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Footer ends here*/
+
+
+@media screen and (max-width: 320px) {
+    
+    section {
+        padding-top: 3px;
+    }
+    
+    section h3 {
+        margin-left: 10px; /* Update margin for smaller screens */
+        font-size: 24px; /* Update font size for smaller screens */
+    }
+
+    .faqs {
+        margin-left: 10px; /* Update margin for smaller screens */
+        font-size: 14px; /* Update font size for smaller screens */
+        margin-right: 10px; /* Update margin for smaller screens */
+    }
+
+    section h3 + ul li {
+        margin-left: 10px; /* Update margin for smaller screens */
+        font-size: 14px; /* Update font size for smaller screens */
+    }
+    
+     .menuToggle {
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+    
+    header .navigation{
+        display: none;
+        position: absolute;
+        visibility: hidden;
+        left: 100%;
+    }
+    
+     header .scart{
+        left: -40px; 
+    }
+
+    header .profile{
+        left: -27px;
+    }
+    
+     .logo{
+        font-size: 2.0em;  
+    }
+    
+    .footer {
+        flex-direction: column;
+    }
+    .col-1 {
+        order: 2;
+        position: relative;
+        top: -150px;
+        right: 80px;
+    }
+    .col-1 .logo{
+        font-size: 50px;
+        position: absolute;
+    
+    }
+    .col-2 {
+        order: 1;
+        position: relative;
+    }
+    .col-2 p{
+        top: 180px;
+        position: absolute;
+        left: 15px;
+    }
+    .col-3 {
+        order: 3;
+        position: relative;
+        top: -240px;
+        left: 50px;
+    }
+    .col-3 .social-icons{
+        font-size: 10px;
+        position: absolute;
+    }
+    
+   
+    form input {
+       width: calc(100% - 60px);
+       
+}
+
+    ion-icon[name="mail"] {
+        font-size: 1.5em;
+    }
+
+    ion-icon[name="send-outline"] {
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (min-width: 321px) and (max-width: 445px) {
+    section {
+        padding-top: 10px;
+    }
+       
+    section h3 {
+        margin-left: 10px; /* Update margin for smaller screens */
+        font-size: 24px; /* Update font size for smaller screens */
+    }
+
+    .faqs {
+        margin-left: 10px; /* Update margin for smaller screens */
+        font-size: 14px; /* Update font size for smaller screens */
+        margin-right: 10px; /* Update margin for smaller screens */
+    }
+
+    section h3 + ul li {
+        margin-left: 10px; /* Update margin for smaller screens */
+        font-size: 14px; /* Update font size for smaller screens */
+    }
+    
+     .menuToggle {
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+    
+    header .navigation{
+        display: none;
+        position: absolute;
+        visibility: hidden;
+        left: 100%;
+    }
+    
+    
+    header .scart{
+        left: -50px; 
+    }
+
+    header .profile{
+        left: -30px;
+    } 
+    
+    .footer {
+        flex-direction: column;
+    }
+    .col-1 {
+        order: 2;
+        position: relative;
+        top: -150px;
+        right: 80px;
+    }
+    .col-1 .logo{
+        font-size: 50px;
+        position: absolute;
+    
+    }
+    .col-2 {
+        order: 1;
+        position: relative;
+    }
+    .col-2 p{
+        top: 200px;
+        position: absolute;
+        left: 15px;
+    }
+    .col-3 {
+        order: 3;
+        position: relative;
+        top: -240px;
+        left: 60px;
+    }
+    .col-3 .social-icons{
+        font-size: 10px;
+        position: absolute;
+    }
+    
+   
+    form input {
+       width: calc(100% - 60px);
+       
+}
+
+    ion-icon[name="mail"] {
+        font-size: 1.5em;
+    }
+
+    ion-icon[name="send-outline"] {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 446px) and (max-width: 680px) {
+    section h3 {
+        margin-left: 10px; /* Update margin for smaller screens */
+        font-size: 24px; /* Update font size for smaller screens */
+    }
+
+    .faqs {
+        margin-left: 10px; /* Update margin for smaller screens */
+        font-size: 14px; /* Update font size for smaller screens */
+        margin-right: 10px; /* Update margin for smaller screens */
+    }
+
+    section h3 + ul li{
+        margin-left: 10px; /* Update margin for smaller screens */
+        font-size: 14px; /* Update font size for smaller screens */
+    }
+    
+      .menuToggle {
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+    
+    header .navigation{
+        display: none;
+        position: absolute;
+        visibility: hidden;
+        left: 100%;
+    }
+    
+    header .scart{
+        left: -50px; 
+    }
+
+    header .profile{
+        left: -30px;
+    }
+    
+    .footer {
+        flex-direction: column;
+    }
+    .col-1 {
+        order: 2;
+        position: relative;
+        top: -150px;
+        right: 80px;
+    }
+    .col-1 .logo{
+        font-size: 50px;
+        position: absolute;
+    
+    }
+    .col-2 {
+        order: 1;
+        position: relative;
+    }
+    .col-2 p{
+        top: 200px;
+        position: absolute;
+        left: 25px;
+    }
+    .col-3 {
+        order: 3;
+        position: relative;
+        top: -240px;
+        left: 80px;
+    }
+    .col-3 .social-icons{
+        font-size: 10px;
+        position: absolute;
+    }
+    
+   
+    form input {
+       width: calc(100% - 60px);
+       
+}
+
+    ion-icon[name="mail"] {
+        font-size: 1.5em;
+    }
+
+    ion-icon[name="send-outline"] {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 681px) and (max-width: 1350px) {
+   section h3 {
+        margin-left: 80px; /* Update margin for smaller screens */
+        font-size: 24px; /* Update font size for smaller screens */
+    }
+
+    .faqs {
+        margin-left: 80px; /* Update margin for smaller screens */
+        font-size: 14px; /* Update font size for smaller screens */
+        margin-right: 120px; /* Update margin for smaller screens */
+    }
+
+    section h3 + ul li{
+        margin-left: 100px; /* Update margin for smaller screens */
+        font-size: 14px; /* Update font size for smaller screens */
+    }
+    
+      .menuToggle {
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+    
+    header .navigation{
+        display: none;
+        position: absolute;
+        visibility: hidden;
+        left: 100%;
+    }   
+    
+    header .scart{
+        left: -50px; 
+    }
+
+    header .profile{
+        left: -30px;
+    }
+    
+    .footer {
+        flex-direction: column;
+    }
+    .col-1 {
+        order: 2;
+        position: relative;
+        top: -150px;
+        right: 80px;
+    }
+    .col-1 .logo{
+        font-size: 50px;
+        position: absolute;
+    
+    }
+    .col-2 {
+        order: 1;
+        position: relative;
+    }
+    .col-2 p{
+        top: 150px;
+        position: absolute;
+        left: 160px;
+    }
+    .col-3 {
+        order: 3;
+        position: relative;
+        top: -240px;
+        left: 210px;
+    }
+    .col-3 .social-icons{
+        font-size: 10px;
+        position: absolute;
+    }
+    
+   
+    form input {
+       width: calc(100% - 60px);
+       
+}
+
+    ion-icon[name="mail"] {
+        font-size: 1.5em;
+    }
+
+    ion-icon[name="send-outline"] {
+        font-size: 1.5em;
+    }
+}
